@@ -1,6 +1,8 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Selectors.byName;
@@ -8,6 +10,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+@Feature("Main functional")
+@Story("Regression tests")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AliRadarTestsRu extends TestBase {
 

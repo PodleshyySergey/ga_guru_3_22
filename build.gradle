@@ -75,7 +75,9 @@ tasks.withType(Test) {
 }
 
 test {
-    useJUnitPlatform()
     systemProperties = System.properties
+    useJUnitPlatform()
+    systemProperty 'selenide.fastSetValue', 'true'
+    systemProperty 'chromeoptions.args', '--disable-notifications'
     systemProperty 'chromeoptions.prefs', 'intl.accept_languages=ru'
 }

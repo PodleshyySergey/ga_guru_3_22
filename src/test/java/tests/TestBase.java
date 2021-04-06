@@ -26,7 +26,6 @@ public class TestBase {
     void setUp() {
         step("Открытие главной страницы вебсайта \"https://aliradar.com/\"", ()-> {
             open("https://aliradar.com/");
-            sleep(5000);
         });
     }
 

@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
@@ -102,4 +103,47 @@ public class AliRadarTests extends TestBase {
 
     }
 
+    @Test
+    @AllureId("2193")
+    @Order(4)
+    @DisplayName("Проверка отображения на главной странице категорий товаров в разделе \"Полезные категории\".")
+    void testCheckCategoryInUsefulCategories() {
+
+        step("Проверка отображения категории \"Наручные часы\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Наручные часы')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Мобильные телефоны и аксессуары\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Мобильные телефоны и аксессуары')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Мужская одежда\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Мужская одежда')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Красота и здоровье\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Красота и здоровье')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Спорт и развлечения\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Спорт и развлечения')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Лампы и освещение\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Лампы и освещение')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Ремонт и обустройство дома\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Ремонт и обустройство дома')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Багаж и сумки\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Багаж и сумки')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Инструменты\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Инструменты')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Бытовая техника\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Бытовая техника')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Авто и мототовары\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Авто и мототовары')]").shouldBe(Condition.visible);
+        });
+        step("Проверка отображения категории \"Мать и ребенок\" в разделе \"Полезные категории\".", ()-> {
+            $x("//h2[contains(text(), 'Полезные категории')]/..//h3[contains(text(), 'Мать и ребенок')]").shouldBe(Condition.visible);
+        });
+    }
 }
